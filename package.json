@@ -1,0 +1,45 @@
+{
+  "name": "perspective-test",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "libs/*",
+      "apps/*"
+    ],
+    "nohoist": [
+      "**/@nestjsx",
+      "**/@nestjsx/**",
+      "**/class-validator",
+      "**/class-validator/**",
+      "**/class-transformer",
+      "**/class-transformer/**",
+      "**/@nestjs",
+      "**/@nestjs/**",
+      "**/jwt-decode",
+      "**/jwt-decode/**",
+      "**/@nestjs-modules",
+      "**/@nestjs-modules/**",
+      "**/@invertase/",
+      "**/@invertase/**",
+      "swagger-ui-express",
+      "**/swagger-ui-express",
+      "**/swagger-ui-express/**"
+    ]
+  },
+  "scripts": {
+    "lint": "lerna run lint --parallel",
+    "watch": "lerna run watch --parallel",
+    "prewatch": "yarn build --scope=@perspective/shared",
+    "build": "lerna run build --stream",
+    "build:libs": "lerna run build --stream --stream --scope=@perspective/shared",
+    "watch:shared": "lerna run watch --stream --scope=@perspective/shared",
+    "watch:api": "lerna run watch --stream --scope=@perspective/services"
+  },
+  "devDependencies": {
+    "js-convert-case": "^4.2.0",
+    "lerna": "^4.0.0",
+    "tmp-promise": "^3.0.3",
+    "typescript": "4.4.4",
+    "yurnalist": "^2.1.0"
+  }
+}

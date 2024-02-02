@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "esModuleInterop": true,
+    "target": "es2017"
+  },
+  "exclude": ["node_modules", "dist", "files", "typings"]
+}
