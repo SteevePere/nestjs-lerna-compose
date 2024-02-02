@@ -1,27 +1,27 @@
-import { ApiPropertyOptional } from "@nestjs/swagger";
-import { Type } from "class-transformer";
-import { IsInt, IsOptional, Min } from "class-validator";
+import { ApiPropertyOptional } from '@nestjs/swagger';
+import { Type } from 'class-transformer';
+import { IsInt, IsOptional, Min } from 'class-validator';
 
 export class PaginatedRequest {
-@ApiPropertyOptional({
+  @ApiPropertyOptional({
     minimum: 0,
     default: 0,
     description: 'Number of items to skip',
     example: 0,
-    })
-    @Type(() => Number)
-    @IsInt()
-    @Min(0)
-    @IsOptional()
-    skip?: number;
+  })
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  @IsOptional()
+  skip?: number;
 
-    @ApiPropertyOptional({
+  @ApiPropertyOptional({
     default: 10,
     description: 'Number of items to take',
     example: 10,
-    })
-    @Type(() => Number)
-    @IsInt()
-    @IsOptional()
-    limit?: number;
+  })
+  @Type(() => Number)
+  @IsInt()
+  @IsOptional()
+  limit?: number;
 }

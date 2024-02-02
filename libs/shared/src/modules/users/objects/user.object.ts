@@ -5,7 +5,7 @@ import {
   IsEnum,
   IsNotEmpty,
   IsOptional,
-  IsString
+  IsString,
 } from 'class-validator';
 
 import { BaseEntityObject } from '../../shared/objects/base-entity.object';

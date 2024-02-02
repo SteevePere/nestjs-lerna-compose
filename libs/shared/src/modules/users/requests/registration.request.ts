@@ -4,7 +4,7 @@ import {
   IsEmail,
   IsEnum,
   IsNotEmpty,
-  IsString
+  IsString,
 } from 'class-validator';
 
 import { Match } from '../../../decorators/validation/match.decorator';
@@ -38,7 +38,8 @@ export class RegistrationRequest extends PasswordRequest {
   email: string;
 
   @ApiProperty({
-    description: 'Password confirmation of the future User. Must match password',
+    description:
+      'Password confirmation of the future User. Must match password',
     example: 'NeverGonnaGiveYouUp1234',
   })
   @IsString()

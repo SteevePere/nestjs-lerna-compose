@@ -18,7 +18,7 @@ import { createFromClass } from 'src/core/utils/transformers.util';
 import { RegistrationData } from '../dtos/register.dto';
 import { UsersService } from '../services/users.service';
 
-/* Important: All data validation is handled by class-validator rules,
+/* All data validation is handled by class-validator rules,
 which are defined at the DTO level (DTOs are called "...Request" here, e.g. RegistrationRequest).
 See libs/shared DTOs (libs/shared/src/modules/users/requests).*/
 @Controller('users')

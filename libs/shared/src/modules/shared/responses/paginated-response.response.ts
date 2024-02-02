@@ -12,7 +12,7 @@ export class PaginatedResponse<T> {
     example: 3,
   })
   count: number;
-  
+
   @ApiProperty({
     description: 'Number of items per page',
     example: 1,
@@ -25,4 +25,3 @@ export class PaginatedResponse<T> {
   })
   skip: number;
 }
-  

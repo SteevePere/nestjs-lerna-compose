@@ -15,14 +15,11 @@
     "import-newlines"
   ],
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "plugin:react/recommended"
+    "plugin:prettier/recommended"
   ],
   "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }],
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -31,8 +28,8 @@
     "@typescript-eslint/no-redeclare": 0,
     "quotes": [2, "single", { "avoidEscape": true }],
     "jsx-quotes": [2, "prefer-single"],
-    "indent": ["error", 2, { "MemberExpression": 0 }],
-    "import-newlines/enforce": ["error", { "items": 20, "max-len": 80 }],
+    "indent": ["error", 2, { "MemberExpression": 1 }],
+    "import-newlines/enforce": ["error", { "items": 20, "max-len": 90 }],
     "import/order": [
       "error",
       {
