@@ -27,9 +27,6 @@ Here you will find everything you need to run, test and understand this project.
 
 `git clone `[`https://github.com/SteevePere/perspective-test.git`](https://github.com/SteevePere/perspective-test.git)
 
-* Using SSH:
-
-`git clone git@github.com:SteevePere/perspective-test.git`
 
 ## 2. Navigate to the root of the project:
 
