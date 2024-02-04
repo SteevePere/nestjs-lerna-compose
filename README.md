@@ -116,7 +116,7 @@ Now you can play around with the API :).
 
 # II. Testing
 
-I have written both unit tests and end-to-end tests for the Users module . See the "Code structure" section to locate them easily.
+I have written both unit tests and end-to-end tests for the Users module. See the "Code structure" section to locate them easily.
 
 ## 1. Unit tests
 
