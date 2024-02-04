@@ -19,6 +19,8 @@ Welcome to the perspective-test repository!
 
 Here you will find everything you need to run, test and understand this project.
 
+Here are the [project requirements](https://perspectiveco.notion.site/Work-sample-Senior-Backend-Engineer-Steeve-P-r-ae304c152cbf46278db862a95e965ff8) for easy access.
+
 # **I. Setup**
 
 ## 1. Clone the repository:
@@ -39,6 +41,9 @@ Now you have two options: You can either 1) run the project on your OS directly,
 **3.a. Using Docker Compose (recommended)**
 
 `docker compose up`
+
+> [!WARNING]
+You may need to use sudo!
 
 > [!NOTE]
 This may take a little while the first time you build the images. Should take about 3 minutes. I haven't had the time to look into build optimization :').
