@@ -128,7 +128,9 @@ From the root of the repo, run:
 
 ## 2. End-to-end tests
 
-To run the tests, you must first build the shared library. From the root of the project, run:
+If you haven't already done so during project setup (in other terms, if you chose to use docker compose to run the project), you must first build the shared library.
+
+From the root of the project, run:
 
 `cd libs/shared && yarn build`
 
@@ -140,7 +142,7 @@ If initially you decided to run the project using Docker Compose, see section 3.
 Please note that I haven't had the time to setup an in-memory db for testing purposes, so even though I am mocking the whole app, end-to-end tests will use the main db configured in the .env file.
 
 
-Then, run this command to run the e2e tests:
+Then, run this command from apps/services to run the e2e tests:
 
 `yarn test:e2e`
 
