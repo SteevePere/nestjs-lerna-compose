@@ -13,6 +13,17 @@ Welcome to the perspective-test repository!
 
 Here you will find everything you need to run, test and understand this project.
 
+***
+
+# I. [Setup](https://github.com/SteevePere/perspective-test?tab=readme-ov-file#i-setup)
+
+# II. [Testing](https://github.com/SteevePere/perspective-test?tab=readme-ov-file#ii-testing)
+
+# III. [Code Structure](https://github.com/SteevePere/perspective-test?tab=readme-ov-file#iii-code-structure)
+
+# IV. [Design Choices](https://github.com/SteevePere/perspective-test?tab=readme-ov-file#iv-design-choices)
+
+***
 
 # **I. Setup**
 
@@ -38,7 +49,7 @@ Now you have two options: You can either 1) run the project on your OS directly,
 
 `docker-compose up`
 
-[!NOTE] 
+> [!NOTE]
 This may take a little while the first time you build the images. Should take about 3 minutes. I haven't had the time to look into build optimization :').
 
 That's it! You can now go directly to 4).
@@ -51,9 +62,10 @@ From the root of the repository, run the following command to install all depend
 
 `yarn`
 
-:::caution
+
+> [!WARNING]
 This repository is a Lerna + Yarn Workspaces monorepo. Using npm instead of yarn to install packages may create errors.
-:::
+
 
 * 3.b.2. Library
 
@@ -65,11 +77,10 @@ Next, we want to build the shared library (see "Code Structure" section for more
 
 Before we can run the API, we need a database server running. This API uses PostgreSQL. I recommend running a Docker container that you can just discard once you're done:
 
-:::caution
+> [!WARNING]
 If you already have a Postgres server running, please edit the port mapping in the command below to use a different port than 5432 (edit the left value "5432" after "-p").
-
 Alternatively, feel free to shut down your server!
-:::
+
 
 `docker run --name postgres -e POSTGRES_PASSWORD=root -e POSTGRES_DB=perspective-test -d -p 5432:5432 postgres`
 
@@ -79,17 +90,17 @@ If you prefer to use your own PostgreSQL server, please create a "perspective-te
 
 Next, we want to make sure the .env file in the API (apps/services/.env) is correctly configured for this setup:
 
-:::danger
+> [!CAUTION]
 I have pushed my .env file (with values) to make testing this project easier, but this should never be done with actual repositories.
-:::
+
 
 Edit the `DATABASE_URL` variable so that the connection string matches your database server. If you've ran the Docker container above, use "localhost" as a host (ports are mapped). If you're using your own Postgres server, please simply edit the username and password to match your own config. In apps/services/.env:
 
 `DATABASE_URL=postgresql://postgres:root@localhost:5432/perspective-test`
 
-:::tip
+> [!TIP]
 The default host name "postgres" in the .env file is the name of the Docker service defined in my Docker Compose. If you modify it and wish to test the compose later on, please reset the host to "postgres".
-:::
+
 
 * 3.b.3. Running the API
 
@@ -127,9 +138,9 @@ Next, you will need to make sure that the mocked API has a working connection wi
 
 If initially you decided to run the project using Docker Compose, see section 3.b.3. "Database" of the Setup procedure.
 
-:::tip
+> [!NOTE]
 Please note that I haven't had the time to setup an in-memory db for testing purposes, so even though I am mocking the whole app, end-to-end tests will use the main db configured in the .env file.
-:::
+
 
 Then, run this command to run the e2e tests:
 
