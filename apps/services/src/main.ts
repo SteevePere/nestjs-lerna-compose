@@ -27,7 +27,6 @@ async function bootstrap() {
     .setTitle('Perspective Test')
     .setDescription('Documentation for the Perspective Test REST API')
     .setVersion('1.0')
-    .addBearerAuth({ type: 'apiKey', name: 'access-token', in: 'header' })
     .build();
 
   const document = SwaggerModule.createDocument(app, swaggerConfig, {
