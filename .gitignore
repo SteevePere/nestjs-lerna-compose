@@ -5,8 +5,6 @@ dist
 tmp
 out-tsc
 .rpt2_cache
-.env
-
 
 # dependencies
 node_modules
