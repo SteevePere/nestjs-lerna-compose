@@ -38,7 +38,7 @@ Now you have two options: You can either 1) run the project on your OS directly,
 
 **3.a. Using Docker Compose (recommended)**
 
-`docker-compose up`
+`docker compose up`
 
 > [!NOTE]
 This may take a little while the first time you build the images. Should take about 3 minutes. I haven't had the time to look into build optimization :').
