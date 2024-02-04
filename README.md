@@ -95,9 +95,11 @@ The default host name "postgres" in the .env file is the name of the Docker serv
 
 * 3.b.3. Running the API
 
-We can now run the API.
+We can now run the API. If you're still in the shared lib directory, run:
 
-`cd services && yarn start:dev`
+`cd ../../apps/services && yarn start:dev`
+
+(`cd apps/services && yarn start:dev` from the root of the repo). 
 
 If all steps above have been done correctly, the API should start and listen on port 8080.
 
