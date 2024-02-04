@@ -6,24 +6,18 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /><a>
 </p>
 
+<div align="center">
+  <a href="#i-setup">Setup</a> |
+  <a href="#ii-testing">Testing</a> |
+  <a href="#iii-code-structure">Code Structure</a> |
+  <a href="#iv-design-choices">Design Choices</a>
+</div>
 
 ***
 
 Welcome to the perspective-test repository!
 
 Here you will find everything you need to run, test and understand this project.
-
-***
-
-# I. [Setup](https://github.com/SteevePere/perspective-test?tab=readme-ov-file#i-setup)
-
-# II. [Testing](https://github.com/SteevePere/perspective-test?tab=readme-ov-file#ii-testing)
-
-# III. [Code Structure](https://github.com/SteevePere/perspective-test?tab=readme-ov-file#iii-code-structure)
-
-# IV. [Design Choices](https://github.com/SteevePere/perspective-test?tab=readme-ov-file#iv-design-choices)
-
-***
 
 # **I. Setup**
 
