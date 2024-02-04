@@ -3,7 +3,6 @@ import { ApiProperty } from '@nestjs/swagger';
 export class PaginatedResponse<T> {
   @ApiProperty({
     description: 'Array of results',
-    example: '1991-10-16T21:50:00.000Z',
   })
   items: T[];
 
