@@ -9,6 +9,7 @@ import {
 } from '@perspective/shared';
 import { nanoid } from 'nanoid';
 import { AppModule } from 'src/app.module';
+import { TypeOrmConflictErrorInterceptor } from 'src/core/interceptors/typeorm-conflict-error.interceptor';
 import * as request from 'supertest';
 
 describe('UsersController (e2e)', () => {
@@ -21,6 +22,8 @@ describe('UsersController (e2e)', () => {
     }).compile();
 
     app = moduleFixture.createNestApplication(); // Mocking the whole application
+    app.useGlobalInterceptors(new TypeOrmConflictErrorInterceptor()); // Using the global duplicate key error interceptor
+
     await app.init();
   });
 
@@ -63,6 +66,23 @@ describe('UsersController (e2e)', () => {
     };
 
     expect(response.body).toEqual(expectedResponse);
+  });
+
+  it('throws a 409 HTTP exception when trying to register with an existing email', async () => {
+    const registrationRequest = {
+      password: 'NeverGonnaGiveYouUp1234',
+      firstName: 'Jane', // Using a different name
+      lastName: 'Doe',
+      email: createdUserEmail, // Reusing the same email
+      passwordConfirm: 'NeverGonnaGiveYouUp1234',
+      birthDate: '1991-10-16T21:50:00.000Z',
+      gender: UserGenderEnum.FEMALE, // Using a different gender
+    };
+
+    await request(app.getHttpServer())
+      .post('/users/register')
+      .send(registrationRequest)
+      .expect(409);
   });
 
   it('/users (GET)', async () => {

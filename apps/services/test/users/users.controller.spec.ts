@@ -84,6 +84,17 @@ describe('UsersController', () => {
       const result = await controller.register(registrationRequest);
 
       expect(result).toEqual(registrationResponse);
+
+      jest.spyOn(usersService, 'register').mockRejectedValue({
+        response: { status: 409 }, // Simulating a 409 http error
+      });
+
+      // Asserting controller throws an exception with a 409 status code
+      await expect(
+        controller.register(registrationRequest),
+      ).rejects.toMatchObject({
+        response: { status: 409 },
+      });
     });
   });
 
