@@ -1,4 +1,4 @@
-<h1 align="center">Perspective - Work Sample</h1>
+<h1 align="center">Nestjs-Lerna-Dompose (Demo)</h1>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /><a>
@@ -13,11 +13,9 @@
 
 ***
 
-Welcome to the perspective-test repository!
+Welcome to the nestjs-lerna-compose repository!
 
 Here you will find everything you need to run, test and understand this project.
-
-Here are the [project requirements](https://perspectiveco.notion.site/Work-sample-Senior-Backend-Engineer-Steeve-P-r-ae304c152cbf46278db862a95e965ff8) for easy access.
 
 # **I. Setup**
 
@@ -25,12 +23,12 @@ Here are the [project requirements](https://perspectiveco.notion.site/Work-sampl
 
 * Using HTTPS:
 
-`git clone `[`https://github.com/SteevePere/perspective-test.git`](https://github.com/SteevePere/perspective-test.git)
+`git clone `[`https://github.com/SteevePere/nestjs-lerna-compose.git`](https://github.com/SteevePere/nestjs-lerna-compose.git)
 
 
 ## 2. Navigate to the root of the project:
 
-`cd perspective-test`
+`cd nestjs-lerna-compose`
 
 Now you have two options: You can either 1) run the project on your OS directly, or 2) use my Docker Compose setup to run everything in Docker (recommended!).
 
@@ -76,11 +74,11 @@ If you already have a Postgres server running, please edit the port mapping in t
 Alternatively, feel free to shut down your server!
 
 
-`docker run --name postgres -e POSTGRES_PASSWORD=root -e POSTGRES_DB=perspective-test -d -p 5432:5432 postgres`
+`docker run --name postgres -e POSTGRES_PASSWORD=root -e POSTGRES_DB=nestjs-lerna-compose -d -p 5432:5432 postgres`
 
-This runs a fully-configured PostgreSQL container with a "perspective-test" database already created for you.&#x20;
+This runs a fully-configured PostgreSQL container with a "nestjs-lerna-compose" database already created for you.&#x20;
 
-If you prefer to use your own PostgreSQL server, please create a "perspective-test" database manually.
+If you prefer to use your own PostgreSQL server, please create a "nestjs-lerna-compose" database manually.
 
 Next, we want to make sure the .env file in the API (apps/services/.env) is correctly configured for this setup:
 
@@ -90,7 +88,7 @@ I have pushed my .env file (with values) to make testing this project easier, bu
 
 Edit the `DATABASE_URL` variable so that the connection string matches your database server. If you've ran the Docker container above, use "localhost" as a host (ports are mapped). If you're using your own Postgres server, please simply edit the username and password to match your own config. In apps/services/.env:
 
-`DATABASE_URL=postgresql://postgres:root@localhost:5432/perspective-test`
+`DATABASE_URL=postgresql://postgres:root@localhost:5432/nestjs-lerna-compose`
 
 > [!TIP]
 The default host name "postgres" in the .env file is the name of the Docker service defined in my Docker Compose. If you modify it and wish to test the compose later on, please reset the host to "postgres".
