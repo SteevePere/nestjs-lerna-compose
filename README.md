@@ -42,7 +42,7 @@ Now you have two options: You can either 1) run the project on your OS directly,
 You may need to use sudo!
 
 > [!NOTE]
-This may take a little while the first time you build the images. Should take about 3 minutes. I haven't had the time to look into build optimization :').
+This may take a little while the first time you build the images. Should take about 3 minutes.
 
 That's it! You can now go directly to 4).
 
